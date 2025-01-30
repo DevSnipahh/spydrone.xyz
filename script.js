@@ -9,7 +9,7 @@ if (localStorage.getItem('theme') === 'dark') {
 
 themeToggle.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
-
+    
     if (document.body.classList.contains('dark-mode')) {
         localStorage.setItem('theme', 'dark');
         themeToggle.textContent = '☀️';
@@ -18,3 +18,12 @@ themeToggle.addEventListener('click', () => {
         themeToggle.textContent = '🌙';
     }
 });
+
+// Section Navigation (No Page Reloads)
+function showSection(sectionId) {
+    document.querySelectorAll('.content').forEach(section => {
+        section.classList.remove('active');
+    });
+
+    document.getElementById(sectionId).classList.add('active');
+}
