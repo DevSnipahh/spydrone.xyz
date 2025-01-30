@@ -9,19 +9,28 @@
 </head>
 <body>
     <div class="background"></div>
+
     <header>
         <h1>Fly-Further</h1>
         <button id="theme-toggle">🌙</button>
     </header>
 
     <nav>
-        <a href="home.html">Home</a>
-        <a href="donate.html">Donate</a>
+        <button onclick="showSection('home')">Home</button>
+        <button onclick="showSection('donate')">Donate</button>
     </nav>
 
     <main>
-        <h2>Welcome to Fly-Further</h2>
-        <p>Revolutionizing drone technology with AI-powered innovation.</p>
+        <section id="home" class="content active">
+            <h2>Welcome to Fly-Further</h2>
+            <p>Revolutionizing drone technology with AI-powered innovation.</p>
+        </section>
+
+        <section id="donate" class="content">
+            <h2>Support Our Innovation</h2>
+            <p>Help us push the boundaries of drone technology!</p>
+            <button onclick="alert('Thank you for supporting Fly-Further!')">Donate Now</button>
+        </section>
     </main>
 
     <footer>
