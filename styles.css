@@ -1,4 +1,4 @@
-/* General Styles By ILHN*/
+/* General Styles By ILHN */
 * {
     margin: 0;
     padding: 0;
@@ -15,7 +15,7 @@
     width: 100%;
     height: 100%;
     background: url('Image.png') no-repeat center center/cover;
-    filter: blur(10px);
+    filter: blur(3px); /* Reduced blur */
     z-index: -1;
 }
 
@@ -29,20 +29,25 @@ body {
     text-align: center;
     color: #fff;
     background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
 }
 
-/* Header */
+/* Header (Main Title Bar) */
 header {
+    position: fixed; /* Stick to the top */
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 90%;
-    padding: 20px;
-    backdrop-filter: blur(15px);
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
+    padding: 15px;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 100;
 }
 
 /* Theme Toggle */
@@ -69,6 +74,22 @@ nav button {
     transition: 0.3s;
 }
 nav button:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* Donate Button */
+#donate {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 25px; /* Rounded corners */
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px); /* Blurry effect */
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+#donate:hover {
     background: rgba(255, 255, 255, 0.4);
 }
 
@@ -99,6 +120,6 @@ footer {
     background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
 }
-.dark-mode header, .dark-mode nav button, .dark-mode footer {
+.dark-mode header, .dark-mode nav button, .dark-mode footer, .dark-mode #donate {
     background: rgba(0, 0, 0, 0.4);
 }
